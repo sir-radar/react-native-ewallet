@@ -18,7 +18,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 import {COLORS, SIZES, FONTS, icons, images} from '../constants';
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
   const [showPassword, setShowPassord] = useState(false);
   const [areas, setAreas] = useState([]);
   const [selectedArea, setSelectedArea] = useState(null);
@@ -181,7 +181,7 @@ const SignUp = () => {
             alignItems: 'center',
             justifyContent: 'center',
           }}
-          onPress={() => console.log('Goto Home')}>
+          onPress={() => navigation.navigate('Home')}>
           <Text style={{color: COLORS.white, ...FONTS.h3}}>Continue</Text>
         </TouchableOpacity>
       </View>
